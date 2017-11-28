@@ -11,6 +11,12 @@ Clone the repository, run following commmands.
 
 `npm i` 
 `tns build android`
-`tns run android`
+`tns plugin add nativescript-camera`
 
 This will install all dependencies.
+
+After having an android emulator from completing the NativeScript CLI installation instructions run:
+
+`tns run android`
+
+This will install and run on android emulator.
