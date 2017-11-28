@@ -1,3 +1,4 @@
+<!-- xml for profile -->
 <Page xmlns="http://www.nativescript.org/tns.xsd"
     class="qsf-page"
     loaded="pageLoaded"
@@ -5,16 +6,21 @@
     color="{{ tint }}"
     backgroundColor="{{ tint }}"
     backgroundSpanUnderStatusBar="true">
+    
     <Page.actionBar>
         <ActionBar android:title="Back to all" automationText="ActionBar">
             <NavigationButton text="Back to all" tap="navigateBack" icon="res://ic_arrow_back" />
         </ActionBar>
     </Page.actionBar>
+    
     <GridLayout class="content-background" id='profile'>
+        
         <StackLayout class="marginated-content">
             <Image id="profilePicture" class= "user-image" width="500px" height="500px"/>
             <TextView editable="true" id="profileDescription" class="info-text" />
             <Button ios:text="Documentation" android:text="Add Item" class="info-link-button" tag="{{ url }}" tap="addItem" />
         </StackLayout>
+        
     </GridLayout>
+    
 </Page>
