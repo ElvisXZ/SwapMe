@@ -1,7 +1,4 @@
 var observableModule = require('data/observable'),
-    // colorModule = require('color'),
-    // color = colorModule.Color,
-    // myCarousel = null,
     pageData = new observableModule.Observable(),
     myDataArray = [
 	    {image:'https://images-na.ssl-images-amazon.com/images/I/71nA9hJYfDL._SX522_.jpg', height:'400px'},
