@@ -1,5 +1,5 @@
 # SwapMe
-Mobile application that mimics the Drop or Swap transaction using matching. 
+SwapMe is a product finder app that will help individuals to trade their items with one another.  
 
 ## Developers
 
