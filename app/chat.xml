@@ -1,3 +1,5 @@
+<!-- xml for chat -->
+
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"
       xmlns:chatView="nativescript-chatview"
       navigatingTo="onNavigatingTo">
