@@ -5,3 +5,4 @@ if (global.TNS_WEBPACK) {
     //register application modules
     global.registerModule("main-page", function () { return require("./main-page"); });
 }
+ 
