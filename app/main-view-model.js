@@ -4,6 +4,7 @@ var tnsOAuthModule = require("nativescript-oauth");
 var Sqlite = require("nativescript-sqlite");
 var firebase = require("nativescript-plugin-firebase");
 
+//function takes userid and queries the user-finfo as a JSON response
 function queryUsers(uid) {
     firebase.query(result => {
         console.log("query result:", JSON.stringify(result));
@@ -26,6 +27,7 @@ function queryUsers(uid) {
     });
 }
 
+//Facebook login authentication using firebase, retrieves information of user from facebook 
 function createViewModel() {
     var viewModel = new Observable();
 
@@ -79,7 +81,7 @@ function createViewModel() {
             );
     };
 
-
+    //loggging out from facebook
     viewModel.tapLogout = function () {
         tnsOAuthModule.logout()
             .then(function () { return console.log('logged out'); })
@@ -94,30 +96,3 @@ function createViewModel() {
 
 exports.createViewModel = createViewModel;
 
-
-        // alert({
-                //   title: "Login OK",
-                //   message: JSON.stringify(result),
-                //   okButtonText: "Nice!"
-                // });
-
-    // viewModel.firstname = "";
-    // viewModel.lastname = "";
-
-    // viewModel.insert = function () {
-    //     database.execSQL("INSERT INTO people (firstname, lastname) VALUES (?, ?)", [this.firstname, this.lastname]).then(id => {
-    //         console.log("INSERT RESULT", id);
-    //     }, error => {
-    //         console.log("INSERT ERROR", error);
-    //     });
-    // }
-
-    // viewModel.select = function () {
-    //     database.all("SELECT * FROM people").then(rows => {
-    //         for (var row in rows) {
-    //             console.log("RESULT", rows[row]);
-    //         }
-    //     }, error => {
-    //         console.log("SELECT ERROR", error);
-    //     });
-    // }
