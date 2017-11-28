@@ -1,3 +1,7 @@
+/*
+    Functionality for chat
+*/
+
 "use strict";
 var ChatViewModule = require("nativescript-chatview");
 var Timer = require("timer");
