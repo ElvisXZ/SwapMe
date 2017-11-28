@@ -1,6 +1,5 @@
-/*
-chatting stylings*/
-/*Add this code at end of app.css */
+/*stylings for chat page*/
+
 .nsChatView-view .nsChatView-sendMessageArea {
     margin: 4,0,0,0;
     background-color: #e8e8e8;
