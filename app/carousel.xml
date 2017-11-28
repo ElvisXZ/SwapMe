@@ -1,6 +1,5 @@
-/* Carousel is a component for cycling through elements, like a carousel (slideshow).
+// Carousel is a component for cycling through elements, like a carousel (slideshow).
 
-*/
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded" actionBarHidden="true" xmlns:ns="nativescript-carousel">
 <Page.actionBar>
     <ActionBar title="Features"></ActionBar>
