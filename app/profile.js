@@ -5,6 +5,7 @@ var firebase = require("nativescript-plugin-firebase");
 var camera = require("nativescript-camera");
 var imageModule = require("ui/image");
 
+//Profile page should show info retrieved from info, so this function retrieves relevant info
 function queryUsers(uid) {
     firebase.query(result => {
         console.log("query result:", JSON.stringify(result));
@@ -27,6 +28,7 @@ function queryUsers(uid) {
     });
 }
 
+//This function displays user's name, picture and info in the profile page. 
 exports.pageLoaded = function(args) {
     var page = args.object;
     page.bindingContext = pageData;
@@ -43,11 +45,14 @@ exports.pageLoaded = function(args) {
     
 };
 
+/*Profile page consist of inventory where users can add item. Function accessed user's camera so user
+can upload piture of items they want to trade*/
 exports.addItem = function(args) {
     var page = args.object;
     page.bindingContext = pageData;
     getProf = page.getViewById('profile');
-
+    
+    //ask camera persmissin
     camera.requestPermissions();
     var options = { width: 300, height: 300, keepAspectRatio: false, saveToGallery: true };
     camera.takePicture(options).then(function (imageAsset) {
