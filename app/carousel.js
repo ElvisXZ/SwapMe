@@ -1,8 +1,6 @@
 var observableModule = require('data/observable'),
-    // colorModule = require('color'),
-    // color = colorModule.Color,
-    // myCarousel = null,
     pageData = new observableModule.Observable(),
+    //signup pages shows ways user can use app using this images 
     myDataArray = [
 	    {title:'Find cool and interesting items nearby', color: '#ffffff', image:'https://s3.amazonaws.com/swapmeimg/c1.png', height:'400px'},
 	    {title:'Swipe Right to like something or Swipe Left to pass', color: '#ffffff', image:'https://s3.amazonaws.com/swapmeimg/c2.png'},
