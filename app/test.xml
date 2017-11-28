@@ -1,15 +1,23 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" class="page" loaded="loaded">	
-  <Page.actionBar>		
-    <ActionBar title="Matching" id="verdict"></ActionBar>
-  </Page.actionBar>		
-        <StackLayout id="card" class="card">
-            <Image id="guy" height="500px" width="500px" src=""></Image>
-            <Label id="name"></Label>
-            <Label id="job"></Label>
-            <Label id="age"></Label>
-            <StackLayout orientation="horizontal">
-                <Button text="profile" tap="profilePage" />
-                <Button text="chat" tap="chatPage" />
-            </StackLayout>
+<!-- 
+    Test.xml
+    Testing page for card like/dislike functionality
+-->
+<Page xmlns="http://www.nativescript.org/tns.xsd" class="page" loaded="loaded">
+    <!-- ActionBar -->
+    <Page.actionBar>		
+        <ActionBar title="Matching" id="verdict"></ActionBar>
+    </Page.actionBar>		
+    
+    <!-- Card Layout -->
+    <StackLayout id="card" class="card" height="1400px" width="1000px">
+        <Image id="item" height="500px" width="500px" src=""></Image>
+        <Label id="name"></Label>
+        <Label id="desc"></Label>
+
+        <!-- Profile & Chat Buttons -->
+        <StackLayout orientation="horizontal">
+            <Button text="profile" tap="profilePage" />
+            <Button text="chat" tap="chatPage" />
         </StackLayout>
-</Page>      
+    </StackLayout>
+</Page>
