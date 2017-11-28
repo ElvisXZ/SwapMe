@@ -8,6 +8,8 @@ In NativeScript, a file with the same name as an XML file is known as
 a code-behind file. The code-behind is a great place to place your view
 logic, and to set up your page’s data binding.
 */
+
+// Landing page pictures
 var observableModule = require('data/observable'),
 pageData = new observableModule.Observable(),
 myDataArray = [
@@ -34,7 +36,6 @@ function onNavigatingTo(args) {
     */
     
     var page = args.object;
-    page.bindingContext = createViewModel();
     
     /*
     A page’s bindingContext is an object that should be used to perform
@@ -46,7 +47,7 @@ function onNavigatingTo(args) {
     You can learn more about data binding in NativeScript at
     https://docs.nativescript.org/core-concepts/data-binding.
     */
-    //page.bindingContext = createViewModel();
+    page.bindingContext = createViewModel();
 }
 
 /*
