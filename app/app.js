@@ -1,3 +1,7 @@
+/*
+  Functionality of app
+*/
+
 require('./bundle-config');
 var application = require('application');
 var firebase = require("nativescript-plugin-firebase");
