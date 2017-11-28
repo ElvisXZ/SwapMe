@@ -5,10 +5,12 @@ You can find a full list of user interface components you can use in your app at
 https://docs.nativescript.org/ui/components.
 -->
 
-/* Landing Page */
+<!-- Landing Page -->
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:ns="nativescript-carousel" loaded="pageLoaded" navigatingTo="onNavigatingTo" actionBarHidden="true"  class="page">
     <ScrollView>
     <StackLayout class="p-20">
+        
+        <!-- Swiping pictures-->
         <GridLayout columns="*" rows="auto, *">
             <ns:Carousel id="myCarousel" width="600px" height="450" color="white" pageChanged="myChangeEvent" pageTapped="mySelectedEvent" 
             items="{{ myDataArray }}" indicatorColor="#00B8EB" indicatorColorUnselected="#a3a3a3" indicatorOffset="0,25"
@@ -23,7 +25,7 @@ https://docs.nativescript.org/ui/components.
             </ns:Carousel>    
         </GridLayout>
        
-        // Facebook login button 
+        <!-- Facebook login button --> 
         <Button text="LOG IN WITH FACEBOOK" tap="{{ tapLogin }}" class="btn btn-primary btn-active facebookBtn"/>
     </StackLayout>
     </ScrollView>
