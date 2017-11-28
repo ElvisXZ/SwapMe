@@ -36,16 +36,6 @@ function onNavigatingTo(args) {
     var page = args.object;
     page.bindingContext = createViewModel();
     
-    // (new Sqlite("my.db")).then(db => {
-    //     db.execSQL("CREATE TABLE IF NOT EXISTS people (id INTEGER PRIMARY KEY AUTOINCREMENT, firstname TEXT, lastname TEXT)").then(id => {
-            
-    //     }, error => {
-    //         console.log("CREATE TABLE ERROR", error);
-    //     });
-    // }, error => {
-    //     console.log("OPEN DB ERROR", error);
-    // });
-
     /*
     A page’s bindingContext is an object that should be used to perform
     data binding between XML markup and JavaScript code. Properties
