@@ -3,6 +3,8 @@ var ChatViewModule = require("nativescript-chatview");
 var Timer = require("timer");
 var TypeUtils = require("utils/types");
 var ViewModel = require("./main-view-model");
+
+//function to create reply message, for beta version we are using chatbot to test our chat functionality
 function createAnswer(msg) {
     if (/(\s*)([0-9]+)(\.?)([0-9]*)(\s*)([\+|\-|\*|\/])(\s*)([0-9]+)(\.?)([0-9]*)/i.test(msg)) {
         var result;
@@ -23,6 +25,7 @@ function createAnswer(msg) {
     }
     return 'You said: "' + msg + '"';
 }
+
 function getSimilarity(left, right) {
     if (left === right) {
         return 1;
@@ -63,6 +66,7 @@ function getSimilarity(left, right) {
     }
     return 1.0 - distance / Math.max(left.length, right.length);
 }
+
 function checkForAllTerms(str) {
     var terms = [];
     for (var _i = 1; _i < arguments.length; _i++) {
@@ -113,6 +117,7 @@ function numberToString(n) {
     }
     return str;
 }
+//function to sendMessage and dsiplay message
 function onNavigatingTo(args) {
     var page = args.object;
     page.bindingContext = ViewModel.createViewModel();
