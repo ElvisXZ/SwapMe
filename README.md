@@ -15,12 +15,8 @@ Clone the repository, run following commmands.
 This will install all dependencies.
 
 
-After having an android emulator from completing the NativeScript CLI installation instructions run:
+After creating an android emulator from completing the NativeScript CLI installation instructions, You'll need copy and paste the "google-services.json" file located in the main directy to platform\android\ and run:
 
 `tns run android`
 
-It will first fail. You'll need copy and paste the "google-services.json" file located in the main directy to platform/android/ and run:
-
-`tns run android`
-
-This will install and run on android emulator.
+This will install and run the app on android emulator.
