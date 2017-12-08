@@ -1,7 +1,7 @@
 /*
     Functionality for chat
 */
-
+var frameModule = require("ui/frame");
 "use strict";
 var ChatViewModule = require("nativescript-chatview");
 var Timer = require("timer");
@@ -16,17 +16,25 @@ function createAnswer(msg) {
         return result;
     }
     else if (checkForAllTerms(getLettersAndDigitsOnly(msg), "how", "are", "you")) {
-        return "Fine!";
+        return "Fine! yourself?";
     }
-    else if (checkForAllTerms(getLettersAndDigitsOnly(msg), "what", "time", "is", "it")) {
-        return getTime();
+
+    else if (checkForAllTerms(getLettersAndDigitsOnly(msg), "Union")) {
+        return "Meet me Today";
     }
+
     else if (checkForAllTerms(getLettersAndDigitsOnly(msg), "hi")) {
         return "Hi! How are you?";
     }
-    else if (checkForAllTerms(getLettersAndDigitsOnly(msg), "fine")) {
-        return "Cool!";
+    else if (checkForAllTerms(getLettersAndDigitsOnly(msg), "well")) {
+        return "Cool, Where do you want to meet?";
     }
+    else if (checkForAllTerms(getLettersAndDigitsOnly(msg), "what","time" )) {
+            return "9 pm.";
+        }
+        else if (checkForAllTerms(getLettersAndDigitsOnly(msg), "see","you" )) {
+                    return "Ciao";
+                }
     return 'You said: "' + msg + '"';
 }
 
@@ -127,13 +135,13 @@ function onNavigatingTo(args) {
     page.bindingContext = ViewModel.createViewModel();
     var chatView = new ChatViewModule.ChatView();
     chatView.sendMessageButtonCaption = "Send";
-    chatView.typeMessageHint = "Your message for Albert";
+    chatView.typeMessageHint = "Your Message";
     chatView.notifyOnSendMessageTap(function (eventData) {
         eventData.object.appendMessages({
             date: getTime(),
             isRight: true,
             //need matches mage here
-            image: "~/img/marcel.jpg",
+            image: "https://s3.amazonaws.com/swapmeimg/objects/donnie.jpg",
             message: eventData.message,
         });
         eventData.resetMessage();
@@ -144,7 +152,7 @@ function onNavigatingTo(args) {
                 date: getTime(),
                 isRight: false,
                 //other matchs image here
-                image: "~/img/alert.jpg",
+                image: "http://img2.imgtn.bdimg.com/it/u=375923846,2040075582&fm=27&gp=0.jpg",
                 message: createAnswer(eventData.message),
             });
         }, Math.floor(Math.random() * 2000));
@@ -153,3 +161,11 @@ function onNavigatingTo(args) {
     page.content = chatView;
 }
 exports.onNavigatingTo = onNavigatingTo;
+
+exports.chat = function(args){
+	var topmost = frameModule.topmost();
+    var navigationEntry = {
+        moduleName: "test"
+    };
+    topmost.navigate(navigationEntry);
+};

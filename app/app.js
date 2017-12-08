@@ -20,3 +20,5 @@ firebase.init({
 
 //load the main-page.xml while starting the app
 application.start({ moduleName: 'main-page' });
+
+

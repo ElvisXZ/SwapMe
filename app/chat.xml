@@ -4,9 +4,12 @@
       xmlns:chatView="nativescript-chatview"
       navigatingTo="onNavigatingTo">
 
-  <Page.actionBar>
-    <ActionBar title="Messages">
-    </ActionBar>
-  </Page.actionBar>
+    <!-- added -->
+    <Page.actionBar>
+        <ActionBar title="Message">
+            <NavigationButton android.systemIcon="ic_menu_back" text="Back to ActionBar" tap="chat"></NavigationButton>
+        </ActionBar>
+    </Page.actionBar>
 
 </Page>
+

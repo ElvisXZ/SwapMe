@@ -8,7 +8,10 @@ var imageModule = require("ui/image");
 //Profile page should show info retrieved from info, so this function retrieves relevant info
 function queryUsers(uid) {
     firebase.query(result => {
-        console.log("query result:", JSON.stringify(result));
+        //console.log("query result:", JSON.stringify(result));
+        var field = result.value;
+        console.log("nameeee: ", field['name']);
+        
         return result;
     }, "/users", {
             orderBy: {
@@ -30,6 +33,7 @@ function queryUsers(uid) {
 
 //This function displays user's name, picture and info in the profile page. 
 exports.pageLoaded = function(args) {
+
     var page = args.object;
     page.bindingContext = pageData;
     getProf = page.getViewById('profile');
@@ -64,3 +68,20 @@ exports.addItem = function(args) {
     });
 }
  
+exports.gallery = function(args){
+	var topmost = frameModule.topmost();
+    var navigationEntry = {
+        moduleName: "gallery"
+    };
+    topmost.navigate(navigationEntry);
+};
+
+exports.swipe = function(args){
+	var topmost = frameModule.topmost();
+    var navigationEntry = {
+        moduleName: "test"
+    };
+    topmost.navigate(navigationEntry);
+};
+
+

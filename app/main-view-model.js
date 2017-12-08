@@ -7,7 +7,7 @@ var firebase = require("nativescript-plugin-firebase");
 //function takes userid and queries the user-finfo as a JSON response
 function queryUsers(uid) {
     firebase.query(result => {
-        console.log("query result:", JSON.stringify(result));
+        //console.log("query result:", JSON.stringify(result));
         return true;
     }, "/users", {
             orderBy: {
@@ -50,10 +50,13 @@ function createViewModel() {
                             'isMale': '',
                             'geolocation': '',
                             'distancePreference': 10
+                            
                         }
                     ).then(
                         function (result) {
-                            console.log("created key: " + result.key);
+                            //console.log("created key: " + result.key);
+                            console.log("NAMEEEEEEE: " + result.name);
+                            
                             const topFrame = frameModule.topmost();
                             const navEntry = {
                                 moduleName: "test",
