@@ -11,6 +11,7 @@ Clone the repository, run following commmands.
 
 `npm i` 
 `tns build android`
+`tns plugin add nativescript-imagepicker`
 
 This will install all dependencies.
 
